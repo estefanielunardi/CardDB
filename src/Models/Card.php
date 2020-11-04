@@ -72,15 +72,15 @@ class Card
         return $cardList;
     }
 
-    public function deleteById($id)
-    {
-        $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$id}");
-    }
-
-    // public function delete()
+    // public function deleteById($id)
     // {
-    //     $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$this->id}");
+    //     $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$id}");
     // }
+
+    public function delete()
+    {
+        $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$this->id}");
+    }
 
 
     public function findById($id)

@@ -46,50 +46,63 @@ class CardController
         $card = new Card();
         $cards = $card->all();
 
-        new View("StudentsList", [
-            "students" => $students,
+        new View("CardsList", [
+            "cards" => $cards,
         ]);
     }
 
     public function create(): void
     {
-        new View("CreateStudent");
+        new View("CreateCard");
     }
 
     public function store(array $request): void
     {
-        $newStudent = new Student($request["name"]);
-        $newStudent->save();
+        $newCard = new Card($request["name"], $request["title"]);
+        $newCard->save();
 
-        $this->index();
+        $cards = $newCard->all();
+
+        new View("CardsList", [
+            "cards" => $cards,
+        ]);
     }
 
     public function delete($id)
     {
-        $studentHelper = new Student();
-        $student = $studentHelper->findById($id);
-        $student->delete();
+        $cardHelper = new Card();
+        $card = $cardHelper->findById($id);
+        $card->delete();
 
-        $this->index();
+        $newCard = new Card();
+        $cards = $newCard->all();
+
+        new View("CardsList", [
+            "cards" => $cards,
+        ]);
     }
 
     public function edit($id)
     {
-        //Find Student By Id
-        $studentHelper = new Student();
-        $student = $studentHelper->findById($id);
-        //Execute view with student atributes
-        new View("EditStudent", ["student" => $student]);
+        
+        $cardHelper = new Card();
+        $card = $cardHelper->findById($id);
+    
+        new View("EditCard", ["card" => $card]);
     }
 
     public function update(array $request, $id)
     {
-        // Update Student By ID
-        $studentHelper = new Student();
-        $student = $studentHelper->findById($id);
-        $student->rename($request["name"]);
-        $student->update();
-        // Return to Viwe List
-        $this->index();
+        
+        $cardHelper = new Card();
+        $card = $cardHelper->findById($id);
+        $card->renameNameAndTitle($request["name"], $request["title"]);
+        $card->update();
+        
+        $cards = $card->all();
+
+        new View("CardsList", [
+            "cards" => $cards,
+        ]);
     }
 }

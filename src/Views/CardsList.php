@@ -27,6 +27,7 @@
                     echo "
                     <tr>
                         <td>{$card->getId()}</td>
+                        <td>{$card->getName()}</td>
                         <td>{$card->getTitle()}</td>
                         <td>{$card->getDate()}</td>
                         <td>               

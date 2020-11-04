@@ -15,7 +15,7 @@ class Card
     private $database;
     private $table = "enquiry_cards_table";
 
-    public function __construct(string $name = '', string $title = '',  string $date = null, int $id =  null)
+    public function __construct(string $name = '', string $title = '',  string $date = '', int $id =  null)
     {
         $this->name = $name;
         $this->title = $title;

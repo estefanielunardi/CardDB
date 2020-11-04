@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Controllers\StudentController;
+use App\Controllers\CardController;
 
 
-$controller = new StudentController();
+$controller = new CardController();

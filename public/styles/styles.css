@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
 
 
 .btn-circle {
@@ -10,4 +21,61 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+
+#background{
+    background-color: #00393F;
+}
+
+header{
+    background-color: #028E9B;
+    width: 80%;
+    margin: 0.5em auto;
+    border-radius: 30px;
+    padding: 1em;
+    text-align: center;
+}
+
+nav{
+    width: 90%;
+    margin: 1em auto;
+} 
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.appoint{
+    background-color: #FFC140;
+    padding: 0.7em;
+    border-radius: 15px;
+}
+
+/* create card style */
+
+
+.cardStyle {
+    background-color: #37b4c2;
+    width: 15em;
+    border: solid black;
+    display: inline-flex;
+    border-radius: 30px;
+    padding: 1em;
+}
+
+.send {
+    background-color: #009612;
+    border-radius: 15px;
+}
+
+.cancel {
+    background-color: #A60800;
+    border-radius: 15px;
+}
+
+.edit {
+    background-color:#FFC140;
+    border-radius: 15px;
 }

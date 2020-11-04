@@ -15,22 +15,23 @@
                 <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Created At</th>
+                    <th>Title</th>
+                    <th>Date</th>
                     <th>Options</th>
                 </tr>
             </thead>
 
             <tbody>
                 <?php
-                foreach ($data["students"] as $student) {
+                foreach ($data["cards"] as $card) {
                     echo "
                     <tr>
-                        <td>{$student->getId()}</td>
-                        <td>{$student->getName()}</td>
-                        <td>{$student->getCreatedAt()}</td>
+                        <td>{$card->getId()}</td>
+                        <td>{$card->getTitle()}</td>
+                        <td>{$card->getDate()}</td>
                         <td>               
-                        <a href='?action=edit&id={$student->getId()}'><i class='lnr lnr-pencil'></i></a>
-                            <a href='?action=delete&id={$student->getId()}'><i class='lnr lnr-trash'></i></a>
+                        <a href='?action=edit&id={$card->getId()}'><i class='lnr lnr-pencil'></i></a>
+                            <a href='?action=delete&id={$card->getId()}'><i class='lnr lnr-trash'></i></a>
                         </td>
                     </tr>
                     ";

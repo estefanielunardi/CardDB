@@ -17,14 +17,14 @@
                             <h6 class="card-subtitle mb-2 text-muted"  name="name">{$card->getName()}</h6>
                             <p class="card-text">ID:{$card->getId()}</p>
                             <p class="card-text">Date:{$card->getDate()}</p>
-                            <div class="btn-group buttonGroup" role="group" aria-label="Basic example">
+                            <div class="buttonGroup">
                                 <a href='?action=delete&id={$card->getId()}'>
-                                    <button type="button" class="btn btn-secondary cancel">Delete</button>
+                                <i class="fas fa-trash icono trash"></i>
                                 </a>
                                 <a href='?action=edit&id={$card->getId()}'>
-                                    <button type="button" class="btn btn-secondary edit">Edit</button>
+                                    <i class="fas fa-pencil-alt icono"></i>
                                 </a>
-                            </div>            
+                            </div>           
                         </div>
                     </div>
                                 

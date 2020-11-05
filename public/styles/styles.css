@@ -78,9 +78,6 @@ nav ul{
 
 }
 
-/* create card style */
-
-
 .cardStyle {
     max-width: 30%;
     margin:0.3em;
@@ -112,21 +109,30 @@ nav ul{
 .cancel {
     background-color: #A60800;
     border-radius: 15px;
+    padding: 0.05em;
 }
 
 .edit {
     background-color:#FFC140;
     border-radius: 15px;
+    padding: 0.05em;
 }
 
 .send {
     background-color:#009612;
     border-radius: 15px;
+    
 }
 
-@media only screen and (max-width: 600px) {
-      .cancel .send {    Width: 1 em  }
+
+.icono {
+    font-size: 1.5em;
+    color:#FFC140;
 }
+.trash{
+    color: red;
+}
+
 
 .linkCancel:link{
     text-decoration: none;

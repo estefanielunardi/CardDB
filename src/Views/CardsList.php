@@ -5,13 +5,9 @@
     <?php require_once("Components/Header.php") ?>
     <main class="container">
         <ul>
-            <a  href="?action=create"><li class="appoint">Add new appointment</li></a>
+            <li  class="appointButton"><a class="appoint" href="?action=create">NEW</a></li>
         </ul>
-        <!-- <a href="?action=create">
-            <button class="btn btn-primary btn-circle btn-lg">
-                <i class="fas fa-plus"></i>
-            </button>
-        </a> -->
+        <div class="cardContainer">
                 <?php
                 foreach ($data["cards"] as $card) {
                     echo <<<TAG
@@ -21,7 +17,7 @@
                             <h6 class="card-subtitle mb-2 text-muted"  name="name">{$card->getName()}</h6>
                             <p class="card-text">ID:{$card->getId()}</p>
                             <p class="card-text">Date:{$card->getDate()}</p>
-                            <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="btn-group buttonGroup" role="group" aria-label="Basic example">
                                 <a href='?action=delete&id={$card->getId()}'>
                                     <button type="button" class="btn btn-secondary cancel">Delete</button>
                                 </a>
@@ -34,6 +30,7 @@
                                 
                 TAG;
             } ?>
+        </div>
 
     </main>
 </body>

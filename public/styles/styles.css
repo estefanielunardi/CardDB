@@ -10,20 +10,6 @@
     box-sizing: border-box;
 }
 
-
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    padding: 10px 16px;
-    border-radius: 35px;
-    font-size: 24px;
-    line-height: 1.33;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-
 #background{
     background-color: #00393F;
 }
@@ -47,22 +33,75 @@ nav ul{
     justify-content: space-between;
 }
 
-.appoint{
+.appointButton{
     background-color: #FFC140;
     padding: 0.7em;
     border-radius: 15px;
+    width: 4em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.appointButton:hover{
+    background-color: orangered;
+    color: papayawhip;
+    text-decoration: none;
+}
+
+.appoint:link{
+    text-decoration: none;
+}
+
+.appoint:visited{
+    background-color: orangered;
+    color: papayawhip;
+    text-decoration: none;
+}
+
+.appoint:active{
+    background-color: orangered;
+    color: papayawhip;
+    text-decoration: none;
+}
+
+.cardContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 /* create card style */
 
 
 .cardStyle {
+    max-width: 30%;
+    margin:0.3em;
     background-color: #37b4c2;
-    width: 15em;
     border: solid black;
-    display: inline-flex;
     border-radius: 30px;
     padding: 1em;
+    flex-grow: 1;
+}
+
+.card-text{
+    font-size: 2vw;
+}
+
+.card-title{
+    font-size: 2.5vw;
+}
+
+.card-subtitle{
+    font-size: 2vw;
+}
+
+.buttonGroup{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .cancel {

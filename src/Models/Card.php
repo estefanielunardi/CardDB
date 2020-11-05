@@ -91,13 +91,13 @@ class Card
         return new Card($result[0]["name"], $result[0]["title"], $result[0]["date"], $result[0]["id"]);
     }
 
-    public function UpdateById($data, $id)
-    {
-        $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` = '{$data["name"]}', `title` = '{$data["title"]}' WHERE `id` = {$id}");                                 
-    }
-
-    // public function Update()
+    // public function UpdateById($data, $id)
     // {
-    //     $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` =  '{$this->name}', `title` = '{$data["title"]}' WHERE `id` = {$this->id}");
+    //     $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` = '{$data["name"]}', `title` = '{$data["title"]}' WHERE `id` = {$id}");                                 
     // }
+
+    public function Update()
+    {
+        $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` =  '{$this->name}', `title` = '{$this->title}' WHERE `id` = {$this->id}");
+    }
 }

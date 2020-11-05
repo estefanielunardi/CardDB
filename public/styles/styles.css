@@ -65,17 +65,12 @@ nav ul{
     padding: 1em;
 }
 
-.send {
-    background-color: #009612;
-    border-radius: 15px;
-}
-
 .cancel {
     background-color: #A60800;
     border-radius: 15px;
 }
 
 .edit {
-    background-color:#FFC140;
+    background-color:#009612;
     border-radius: 15px;
 }

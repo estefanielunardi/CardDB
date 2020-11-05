@@ -88,7 +88,10 @@ nav ul {
     flex-grow: 1;
 }
 
-.card-text .card-subtitle  {
+.card-text {
+    font-size: 2vw;
+}
+.card-subtitle {
     font-size: 2vw;
 }
 

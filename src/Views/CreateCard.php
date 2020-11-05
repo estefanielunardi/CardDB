@@ -5,7 +5,7 @@
 
     <main class="container text-center">
 
-        <h2 class="text-center">Nuevo Estudiante</h2>
+        <h2 class="text-center">New Card</h2>
 
         <form action='?action=store' method="post">
             <input type="text" name="name" required>

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -15,7 +15,7 @@
     width: 80%;
 }
 
-#background{
+#background {
     background-color: #00393F;
 }
 
@@ -28,17 +28,17 @@ header{
     text-align: center;
 }
 
-nav{
+nav {
     width: 90%;
     margin: 1em auto;
 } 
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-between;
 }
 
-.appointButton{
+.appointButton {
     background-color: #FFC140;
     padding: 0.7em;
     border-radius: 15px;
@@ -54,23 +54,23 @@ nav ul{
     text-decoration: none;
 }
 
-.appoint:link{
+.appoint:link {
     text-decoration: none;
 }
 
-.appoint:visited{
+.appoint:visited {
     background-color: orangered;
     color: papayawhip;
     text-decoration: none;
 }
 
-.appoint:active{
+.appoint:active {
     background-color: orangered;
     color: papayawhip;
     text-decoration: none;
 }
 
-.cardContainer{
+.cardContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -88,16 +88,12 @@ nav ul{
     flex-grow: 1;
 }
 
-.card-text{
+.card-text .card-subtitle  {
     font-size: 2vw;
 }
 
-.card-title{
+.card-title {
     font-size: 2.5vw;
-}
-
-.card-subtitle{
-    font-size: 2vw;
 }
 
 .buttonGroup{
@@ -124,7 +120,6 @@ nav ul{
     
 }
 
-
 .icono {
     font-size: 1.5em;
     color:#FFC140;
@@ -133,22 +128,21 @@ nav ul{
     color: red;
 }
 
-
-.linkCancel:link{
+.linkCancel:link {
     text-decoration: none;
     color: white;
 }
-.linkCancel:visited{
+.linkCancel:visited {
     text-decoration: none;
     color: white;
 }
 
-.tituloPlace{
+.titlePlace {
     font-size: 2vw;
     width: 100%;
 }
 
-.tituloPlace2{
+.namePlace{
     font-size: 1.7vw;
     width: 100%;
 }

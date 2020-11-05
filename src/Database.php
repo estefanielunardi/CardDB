@@ -7,7 +7,6 @@ use PDOException;
 
 class Database
 {
-
     public $mysql;
 
     public function __construct()

@@ -70,12 +70,7 @@ class Card
         }
 
         return $cardList;
-    }
-
-    // public function deleteById($id)
-    // {
-    //     $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$id}");
-    // }
+    }  
 
     public function delete()
     {
@@ -90,12 +85,7 @@ class Card
 
         return new Card($result[0]["name"], $result[0]["title"], $result[0]["date"], $result[0]["id"]);
     }
-
-    // public function UpdateById($data, $id)
-    // {
-    //     $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` = '{$data["name"]}', `title` = '{$data["title"]}' WHERE `id` = {$id}");                                 
-    // }
-
+   
     public function Update()
     {
         $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` =  '{$this->name}', `title` = '{$this->title}' WHERE `id` = {$this->id}");

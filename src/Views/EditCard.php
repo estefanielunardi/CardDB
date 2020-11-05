@@ -2,7 +2,9 @@
 
 <body>
     <?php require_once("Components/Header.php"); ?>
-
+        <ul>
+            <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
+        </ul>
     <main class="container text-center">
 
         <h2 class="text-center">Edit Card</h2>

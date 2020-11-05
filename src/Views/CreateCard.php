@@ -4,7 +4,7 @@
     <?php require_once("Components/Header.php"); ?>
 
         <ul>
-            <a  href="index.php"><li class="appoint">List of Appointment</li></a>
+            <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
         </ul>
     <main class="container text-center">
         <h2>New Card</h2>

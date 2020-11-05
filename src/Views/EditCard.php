@@ -2,26 +2,26 @@
 
 <body>
     <?php require_once("Components/Header.php"); ?>
-        <ul>
-            <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
-        </ul>
-    <main class="container text-center">
 
-        <h2 class="text-center">Edit Card</h2>
+        <main class="container text-center">
+            <ul>
+                <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
+            </ul>
 
-        <div class="cardStyle">
-            <form action='?action=update&id=<?php echo $data["card"]->getId() ?>' method="post">
-                <div>
-                <input type="text" name="name" required value='<?php echo $data["card"]->getName() ?>'>
-                <input type="text" name="title" required value='<?php echo $data["card"]->getTitle() ?>'>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="submit" class="btn btn-secondary send">Send</button>
-                        <a href="index.php">
-                        <button type="button" class="btn btn-secondary cancel">Cancel</button>
-                        </a>
+            <div class="cardContainer">
+                <div class="cardStyle">
+                <form action='?action=update&id=<?php echo $data["card"]->getId() ?>' method="post">
+                    <div>
+                    <input type="text" name="name" required value='<?php echo $data["card"]->getName() ?>'>
+                    <input type="text" name="title" required value='<?php echo $data["card"]->getTitle() ?>'>
+                    
+                    <div class="btn-group buttonGroup" role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-secondary send">Done</button>
+                    <button type="button" class="btn btn-secondary cancel"><a class="linkCancel" href="index.php">Cancel</a></button>
                     </div>
+                    
+                </form>
                 </div>
-            </form>
-        </div>
+            </div>
     </main>
 </body>

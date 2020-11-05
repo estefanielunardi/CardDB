@@ -9,6 +9,11 @@
     vertical-align: baseline;
     box-sizing: border-box;
 }
+.fondo::-webkit-input-placeholder {
+    background-color: white; 
+    border-radius:5px;
+    width: 80%;
+}
 
 #background{
     background-color: #00393F;
@@ -110,6 +115,34 @@ nav ul{
 }
 
 .edit {
+    background-color:#FFC140;
+    border-radius: 15px;
+}
+
+.send {
     background-color:#009612;
     border-radius: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+      .cancel .send {    Width: 1 em  }
+}
+
+.linkCancel:link{
+    text-decoration: none;
+    color: white;
+}
+.linkCancel:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.tituloPlace{
+    font-size: 2vw;
+    width: 100%;
+}
+
+.tituloPlace2{
+    font-size: 1.7vw;
+    width: 100%;
 }

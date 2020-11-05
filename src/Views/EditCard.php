@@ -12,8 +12,8 @@
                 <div class="cardStyle">
                 <form action='?action=update&id=<?php echo $data["card"]->getId() ?>' method="post">
                     <div>
-                    <input type="text" name="name" required value='<?php echo $data["card"]->getName() ?>'>
-                    <input type="text" name="title" required value='<?php echo $data["card"]->getTitle() ?>'>
+                        <input type="text" name="title" required value='<?php echo $data["card"]->getTitle() ?>'>
+                        <input type="text" name="name" required value='<?php echo $data["card"]->getName() ?>'>
                     
                     <div class="btn-group buttonGroup" role="group" aria-label="Basic example">
                     <button type="submit" class="btn btn-secondary send">Done</button>

@@ -35,7 +35,6 @@ class ApiCardController
 
     public function index(): void
     {
-
         $card = new Card();
         $cards = $card->all();
         $cardApi = [];
@@ -55,16 +54,15 @@ class ApiCardController
         echo json_encode($cardApi);
         // var_dump($cardApi);
     
-
         // new View("CardsList", [
         //     "cards" => $cards,
         // ]);
     }
 
-    public function create(): void
-    {
-        new View("CreateCard");
-    }
+    // public function create(): void
+    // {
+    //     new View("CreateCard");
+    // }
 
     public function store(array $request): void
     {
@@ -92,14 +90,14 @@ class ApiCardController
         ]);
     }
 
-    public function edit($id)
-    {
+    // public function edit($id)
+    // {
         
-        $cardHelper = new Card();
-        $card = $cardHelper->findById($id);
+    //     $cardHelper = new Card();
+    //     $card = $cardHelper->findById($id);
     
-        new View("EditCard", ["card" => $card]);
-    }
+    //     new View("EditCard", ["card" => $card]);
+    // }
 
     public function update(array $request, $id)
     {

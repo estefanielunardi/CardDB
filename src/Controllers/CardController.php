@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\View;
 use App\Models\Card;
 use phpDocumentor\Reflection\Location;
+use App\Logger\Log;
 
 class CardController
 {
@@ -67,6 +68,8 @@ class CardController
         $newCard->save();
 
         $cards = $newCard->all();
+        $log = new Log("Create","Created a new Card");
+        $log-> logInFile();
 
         new View("CardsList", [
             "cards" => $cards,
@@ -81,8 +84,8 @@ class CardController
 
         $newCard = new Card();
         $cards = $newCard->all();
-        $log= new Log();
-        $log->writeInFile();
+        $log = new Log("Delete","Card deleted");
+        $log-> logInFile();
 
         new View("CardsList", [
             "cards" => $cards,
@@ -95,6 +98,9 @@ class CardController
         
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
+
+        $log = new Log("Edit","Edit page");
+        $log-> logInFile();
     
         new View("EditCard", ["card" => $card]);
     }
@@ -108,6 +114,9 @@ class CardController
         $card->update();
         
         $cards = $card->all();
+
+        $log = new Log("Update","Updated Card");
+        $log-> logInFile();
 
         new View("CardsList", [
             "cards" => $cards,

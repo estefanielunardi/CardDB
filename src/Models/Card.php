@@ -90,4 +90,9 @@ class Card
     {
         $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` =  '{$this->name}', `title` = '{$this->title}' WHERE `id` = {$this->id}");
     }
+
+    public function check()
+    {
+       $this->database->mysql->query("INSERT INTO `enquiry_cards_table` SET `checked` = '{$this->name}' WHERE `id` = {$this->id}");
+    }
 }

@@ -1,6 +1,11 @@
 <?php
 
-$logFile = fopen("src/logger/log.txt", "a") or die("Error creando archivo");
-fwrite($logFile, "\n".date("d/m/Y H:i:s")." Mensaje que se quiera grabar") or die("Error escribiendo en el archivo");
+// class log
+
+
+$logFile = fopen("src/logger/log.txt", "a");
+fwrite($logFile, "\n".date("d/m/Y H:i:s")." Mensaje que se quiera grabar");
 fclose($logFile);
+
 ?>
+

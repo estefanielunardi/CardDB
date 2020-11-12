@@ -24,7 +24,7 @@
                                     <i class="fas fa-pencil-alt icono"></i>
                                 </a>
                                 <a href='?action=checked&id={$card->getId()}'>
-                                <input class="cuadradito" type="checkbox" name="checked" value="1">
+                                <input onclick="checked" type="checkbox" name="checked" value="1">
                                 </a>
                             </div>           
                         </div>

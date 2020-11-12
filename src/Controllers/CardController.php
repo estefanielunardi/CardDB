@@ -39,7 +39,7 @@ class CardController
 
         if (isset($_GET) && ($_GET["action"] == "checked")) {
 
-            $this->checked($_GET["id"]);
+            $this->checked($_POST, $GET["id"]);
             return;
         }
         $this->index();
@@ -81,12 +81,15 @@ class CardController
 
         $newCard = new Card();
         $cards = $newCard->all();
+        $log= new Log();
+        $log->writeInFile();
 
         new View("CardsList", [
             "cards" => $cards,
         ]);
     }
 
+    
     public function edit($id)
     {
         
@@ -115,7 +118,7 @@ class CardController
     {
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
-        $card->check($request["name"]);
+        $card->check($request["checked"]);
         $card->checked();
     }
 }

@@ -88,6 +88,27 @@ nav ul {
     flex-grow: 1;
 }
 
+#cardStyleEdit {
+    width: 70%;
+    margin:0.3em;
+    background-color: #37b4c2;
+    border: solid black;
+    border-radius: 30px;
+    padding: 1em;
+    flex-grow: 1;
+}
+
+#cardStyleCreate {
+    width: 70%;
+    margin:0.3em;
+    background-color: #37b4c2;
+    border: solid black;
+    border-radius: 30px;
+    padding: 1em;
+    flex-grow: 1;
+}
+
+
 .card-text {
     font-size: 2vw;
 }
@@ -137,11 +158,11 @@ nav ul {
 }
 
 .titlePlace {
-    font-size: 2vw;
+    font-size: 3vw;
     width: 100%;
 }
 
 .namePlace{
-    font-size: 1.7vw;
+    font-size: 3.7vw;
     width: 100%;
 }

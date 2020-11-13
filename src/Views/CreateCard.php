@@ -8,7 +8,7 @@
             <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
         </ul>
         <div class="cardContainer">
-            <div class="cardStyle">
+            <div id ="cardStyleCreate">
                 <form action='?action=store' method="post">
                     <div>
                         <input placeholder="Coder Name"class="namePlace fondo" type="text" name="name">                       

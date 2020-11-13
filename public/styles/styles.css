@@ -106,9 +106,7 @@ nav ul {
 }
 
 .cancel {
-    background-color: #A60800;
-    border-radius: 15px;
-    padding: 0.05em;
+    color: #A60800;
 }
 
 .edit {
@@ -118,9 +116,7 @@ nav ul {
 }
 
 .send {
-    background-color:#009612;
-    border-radius: 15px;
-    
+    color:#009612;
 }
 
 .icono {

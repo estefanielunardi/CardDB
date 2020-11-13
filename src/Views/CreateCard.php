@@ -14,8 +14,8 @@
                         <input placeholder="Coder Name"class="namePlace fondo" type="text" name="name">                       
                         <input placeholder="Enquiry Title" class="fondo titlePlace" type="text" name="title">
                         <div class="btn-group buttonGroup" role="group" aria-label="Basic example">
-                            <button type="submit" class="btn btn-secondary send">Send</button>
-                            <button type="button" class="btn btn-secondary cancel"><a class="linkCancel" href="index.php">Cancel</a></button>
+                            <button type="submit" ><i class="fas fa-check-square send"></i></button>
+                            <button type="button" ><a class="linkCancel" href="index.php"><i class="fas fa-backspace cancel"></i></a></button>
                         </div>
                     </div>
                 </form>

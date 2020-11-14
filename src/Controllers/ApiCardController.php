@@ -69,11 +69,20 @@ class ApiCardController
         $newCard = new Card($request["name"], $request["title"]);
         $newCard->save();
 
-        $cards = $newCard->all();
+        //$cards = $newCard->all();  CREO QUE NO HAY QUE DEVOLVER TODA LA LISTA, SOLO EL NEWCARD
+        
+        array_push($newCard, [
+            "name" => $card->getName(),
+            "title" =>$card->getTitle(),
+            "id" => $card->getId(),
+            "date" => $card->getDate(), 
+        ]); 
 
-        new View("CardsList", [
-            "cards" => $cards,
-        ]);
+        echo json_encode($newCard); 
+        
+        // new View("CardsList", [
+        //     "cards" => $cards,
+        // ]);
     }
 
     public function delete($id)

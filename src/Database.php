@@ -24,7 +24,7 @@ class Database
 
         $host = "localhost";
         $user = "root";
-        $pass = "";
+        $pass = "root";
         $database = "consultory";
         $charset = "utf-8";
         $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];

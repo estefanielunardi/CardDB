@@ -3,7 +3,7 @@
 <body>
     <?php require_once("Components/Header.php") ?>
     <main class="container">
-        <ul>
+        <ul class="botonesCuadro">
             <li  class="appointButton"><a class="appoint" href="?action=create">NEW</a></li>
             <li  class="appointButton"><a class="appoint" href="?action=archiveview">ARCHIVED LIST</a></li>
         </ul>

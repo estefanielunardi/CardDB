@@ -42,12 +42,15 @@ nav ul {
     background-color: #FFC140;
     padding: 0.7em;
     border-radius: 15px;
-    width: 4em;
     color: black;
     font-weight: bold;
     text-decoration: none;
+    display: inline;
 }
-
+.botonesCuadro{
+    display: flex;
+    justify-content: space-around;
+}
 .appointButton:hover{
     background-color: orangered;
     color: papayawhip;

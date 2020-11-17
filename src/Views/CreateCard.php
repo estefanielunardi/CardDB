@@ -4,8 +4,8 @@
     <?php require_once("Components/Header.php"); ?>
 
     <main class="container text-center">
-        <ul>
-            <li  class="appointButton"><a class="appoint" href="index.php">Cards</a></li>
+        <ul class="botonesCuadro">
+            <li  class="appointButton"><a class="appoint" href="index.php">CARDS</a></li>
         </ul>
         <div class="cardContainer">
             <div id ="cardStyleCreate">

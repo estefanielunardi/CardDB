@@ -4,7 +4,7 @@
     <?php require_once("Components/Header.php") ?>
 
     <main class="container">
-        <ul>
+        <ul class="botonesCuadro">
             <li  class="appointButton"><a class="appoint" href="index.php">BACK TO LIST</a></li>
         </ul>
 

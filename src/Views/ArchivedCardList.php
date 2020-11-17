@@ -7,7 +7,7 @@
         
         <div class="cardContainer">
                 <?php
-                foreach ($data["cards"] as $card) {
+                foreach ($data["card"] as $card) {
                     echo <<<TAG
                     <div class="cardStyle">
                         <div>            

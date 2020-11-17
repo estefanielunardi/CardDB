@@ -61,7 +61,7 @@ class Card
 
     public function all()
     {
-        $query = $this->database->mysql->query("SELECT * FROM {$this->table}");
+        $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE `archive`= 0");
         $cards = $query->fetchAll();
         $cardList = [];
         foreach ($cards as $card) {
@@ -93,12 +93,12 @@ class Card
 
     public function archiveDB()
     {
-       $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `archive` = true  WHERE `enquiry_cards_table`.`id` = {$this->id}");
+       $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `archive` = 1  WHERE `id` = {$this->id}");
     }
 
     public function archivedList()
     {
-        $query = $this->database->mysql->query("SELECT * FROM `enquiry_cards_table` WHERE `archive`= TRUE");
+        $query = $this->database->mysql->query("SELECT * FROM `enquiry_cards_table` WHERE `archive`= 1");
         $cards = $query->fetchAll();
         $cardList = [];
         foreach ($cards as $card) 

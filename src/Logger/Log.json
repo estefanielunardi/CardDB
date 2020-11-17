@@ -550,3 +550,81 @@
     "message": "Updated Card",
     "id": null
 }
+{
+    "time": "17-11-2020 11:57:28",
+    "action": "Edit",
+    "message": "Edit page",
+    "id": null
+}
+{
+    "time": "17-11-2020 11:57:30",
+    "action": "Update",
+    "message": "Updated Card",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:06:22",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:06:53",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:10:01",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:10:13",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:10:17",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:10:43",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:11:00",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:11:09",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:11:17",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:11:22",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "17-11-2020 12:11:28",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}

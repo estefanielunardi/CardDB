@@ -131,9 +131,9 @@ class CardController
         $cardDone = new Card();
         $card = $cardDone->findById($id);
 
-        $cardDone -> archiveDB();
-        $cardDoneList = new Card(); 
-        $cardDoneList->archivedList();
+        $card->archiveDB();
+        $cardFunction = new Card(); 
+        $cardDoneList = $cardFunction->archivedList();
         
         new View("ArchivedCardList", ["card" => $cardDoneList]);
     }

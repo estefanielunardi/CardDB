@@ -61,7 +61,7 @@ class Card
 
     public function all()
     {
-        $query = $this->database->mysql->query("select * FROM {$this->table}");
+        $query = $this->database->mysql->query("SELECT * FROM {$this->table}");
         $cards = $query->fetchAll();
         $cardList = [];
         foreach ($cards as $card) {
@@ -91,8 +91,23 @@ class Card
         $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `name` =  '{$this->name}', `title` = '{$this->title}' WHERE `id` = {$this->id}");
     }
 
-    // public function check()
-    // {
-    //    $this->database->mysql->query("INSERT INTO `enquiry_cards_table` SET `checked` = '{$this->name}' WHERE `id` = {$this->id}");
-    // }
+    public function archiveDB()
+    {
+       $this->database->mysql->query("UPDATE `enquiry_cards_table` SET `archive` = true  WHERE `enquiry_cards_table`.`id` = {$this->id}");
+    }
+
+    public function archivedList()
+    {
+        $query = $this->database->mysql->query("SELECT * FROM `enquiry_cards_table` WHERE `archive`= TRUE");
+        $cards = $query->fetchAll();
+        $cardList = [];
+        foreach ($cards as $card) 
+        {
+            $cardItem = new Card($card["name"], $card["title"], $card["date"], $card["id"]);
+            array_push($cardList, $cardItem);
+        }
+        return $cardList;
+    }
+
+
 }

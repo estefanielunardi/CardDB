@@ -128,6 +128,13 @@ class CardController
     
     public function checked($id)
     {
-        new View("ArchivedCardList");
+        $cardDone = new Card();
+        $card = $cardDone->findById($id);
+
+        $cardDone -> archiveDB();
+        $cardDoneList = new Card(); 
+        $cardDoneList->archivedList();
+        
+        new View("ArchivedCardList", ["card" => $cardDoneList]);
     }
 }

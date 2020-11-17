@@ -24,7 +24,7 @@
                                     <i class="fas fa-pencil-alt icono"></i>
                                 </a>
                                 <a href='?action=checked&id={$card->getId()}'>
-                                <input onclick="checked" type="checkbox" name="checked" value="1">
+                                <i class="fas fa-check-double"></i>
                                 </a>
                             </div>           
                         </div>

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\View;
 use App\Models\Card;
 use phpDocumentor\Reflection\Location;
+// use App\Logger\Log;
 
 class ApiCardController
 {
@@ -69,7 +70,7 @@ class ApiCardController
         $newCard = new Card($request["name"], $request["title"]);
         $newCard->save();
 
-        //$cards = $newCard->all();  CREO QUE NO HAY QUE DEVOLVER TODA LA LISTA, SOLO EL NEWCARD
+        $cards = $newCard->all(); 
         
         array_push($newCard, [
             "name" => $card->getName(),
@@ -78,7 +79,7 @@ class ApiCardController
             "date" => $card->getDate(), 
         ]); 
 
-        echo json_encode($newCard); 
+        echo json_encode($cards); 
         
         // new View("CardsList", [
         //     "cards" => $cards,

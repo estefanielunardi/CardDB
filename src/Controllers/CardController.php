@@ -44,8 +44,7 @@ class CardController
         }
 
         if (isset($_GET) && ($_GET["action"] == "checked")) {
-
-            $this->checked($_POST, $GET["id"]);
+            $this->checked($_GET["id"]);
             return;
         }
     }
@@ -127,11 +126,8 @@ class CardController
         ]);
     }
     
-    public function checked($request, $id)
+    public function checked($id)
     {
-        $cardHelper = new Card();
-        $card = $cardHelper->findById($id);
-        $card->check($request["checked"]);
-        $card->checked();
+        new View("ArchivedCardList");
     }
 }

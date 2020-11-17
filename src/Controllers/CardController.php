@@ -47,6 +47,12 @@ class CardController
             $this->checked($_GET["id"]);
             return;
         }
+
+        if (isset($_GET) && ($_GET["action"] == "archiveview")) {
+            $this->archivedView();
+            return;
+        }
+        
     }
 
     public function index(): void
@@ -135,6 +141,21 @@ class CardController
         $cardFunction = new Card(); 
         $cardDoneList = $cardFunction->archivedList();
         
-        new View("ArchivedCardList", ["card" => $cardDoneList]);
+        $newCard = new Card();
+        $cards = $newCard->all(); 
+        
+        new View("CardsList", [
+            "cards" => $cards,
+        ]);
+        
     }
+    
+    public function archivedView()
+    { 
+        $cardFunction = new Card(); 
+        $cardDoneList = $cardFunction->archivedList();
+
+        new View("ArchivedCardList", ["card" => $cardDoneList]); 
+    }
+    
 }

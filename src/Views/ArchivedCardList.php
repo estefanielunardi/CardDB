@@ -4,7 +4,10 @@
     <?php require_once("Components/Header.php") ?>
 
     <main class="container">
-        
+        <ul>
+            <li  class="appointButton"><a class="appoint" href="index.php">BACK TO LIST</a></li>
+        </ul>
+
         <div class="cardContainer">
                 <?php
                 foreach ($data["card"] as $card) {

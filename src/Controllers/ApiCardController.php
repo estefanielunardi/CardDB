@@ -21,9 +21,9 @@ class ApiCardController
             $this->store($content);
         }
 
-        if ($method == "PUT" {
-            $this->update($id);
-        }
+        // if ($method == "PUT" {
+        //     $this->update($id);
+        // }
 
         if ($method == "DELETE") {
             $this->delete($id);
@@ -56,9 +56,12 @@ class ApiCardController
     {
         $newCard = new Card($request["name"], $request["title"]);
         $newCard->save();
-
-        $cards = $newCard->all(); 
         
+        // $cards = $newCard->all(); 
+
+        // $cardHelper = new Card();
+        $cardHelper = $newCard->findById($id);
+
         array_push($newCard, [
             "name" => $card->getName(),
             "title" =>$card->getTitle(),
@@ -66,11 +69,7 @@ class ApiCardController
             "date" => $card->getDate(), 
         ]); 
 
-        echo json_encode($cards); 
-        
-        // new View("CardsList", [
-        //     "cards" => $cards,
-        // ]);
+        echo json_encode($newCard); 
     }
 
     public function delete($id)
@@ -79,22 +78,9 @@ class ApiCardController
         $card = $cardHelper->findById($id);
         $card->delete();
 
-        $newCard = new Card();
-        $cards = $newCard->all();
-
-        new View("CardsList", [
-            "cards" => $cards,
-        ]);
+        // $newCard = new Card();
+        // $cards = $newCard->all();
     }
-
-    // public function edit($id)
-    // {
-        
-    //     $cardHelper = new Card();
-    //     $card = $cardHelper->findById($id);
-    
-    //     new View("EditCard", ["card" => $card]);
-    // }
 
     public function update(array $request, $id)
     {
@@ -104,10 +90,6 @@ class ApiCardController
         $card->renameNameAndTitle($request["name"], $request["title"]);
         $card->update();
         
-        $cards = $card->all();
-
-        new View("CardsList", [
-            "cards" => $cards,
-        ]);
+        // $cards = $card->all();
     }
 }

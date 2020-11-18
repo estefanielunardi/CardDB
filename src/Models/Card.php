@@ -67,7 +67,6 @@ class Card
             $cardItem = new Card($card["name"], $card["title"], $card["date"], $card["id"]);
             array_push($cardList, $cardItem);
         }
-
         return $cardList;
     }  
 

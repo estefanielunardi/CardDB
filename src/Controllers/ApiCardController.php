@@ -10,6 +10,7 @@ use phpDocumentor\Reflection\Location;
 class ApiCardController
 {
 
+    
     public function __construct(string $method, array $content = null, $id = null)
     {
 
@@ -19,6 +20,7 @@ class ApiCardController
 
         if ($method == "POST") {
             $this->store($content);
+            
         }
 
         // if ($method == "PUT" {
@@ -54,13 +56,14 @@ class ApiCardController
 
     public function store(array $request): void
     {
+
         $newCard = new Card($request["name"], $request["title"]);
         $newCard->save();
         
         // $cards = $newCard->all(); 
 
         // $cardHelper = new Card();
-        $cardHelper = $newCard->findById($id);
+        // $cardHelper = $newCard->findById($id);
 
         array_push($newCard, [
             "name" => $card->getName(),

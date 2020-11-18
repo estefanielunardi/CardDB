@@ -11,9 +11,10 @@ class ApiRouter
     private $content;
     private $id;
 
-    public function __construct($request, $id)
+
+    public function __construct($request, $id = null)
     {
-        $this->requestMethod = $request("REQUEST_METHOD"); 
+        $this->requestMethod = $request["REQUEST_METHOD"]; 
         $this->content = json_decode(file_get_contents("php://input"), true); 
         $this->id = $id; 
         $this->execute(); 
@@ -21,7 +22,7 @@ class ApiRouter
 
     private function execute()
     {
-        new ApiStudentController($this->requestMethod, $this->content, $this->id); 
+        new ApiCardController($this->requestMethod, $this->content, $this->id); 
     }
 
 }

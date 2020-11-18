@@ -58,6 +58,12 @@ class Card
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`,`title`) VALUES ('$this->name', '$this->title');");
     }
 
+    // public function saveOneCard(): void
+    // {
+    //     $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`,`title`) VALUES ('$this->name', '$this->title');");
+    //     $id=mysql_insert_id();
+    // }
+
     public function all()
     {
         $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE `archive`= 0");

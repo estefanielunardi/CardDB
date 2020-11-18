@@ -10,27 +10,23 @@ use phpDocumentor\Reflection\Location;
 class ApiCardController
 {
 
-    public function __construct()
+    public function __construct(string $method, array $content = null, $id = null)
     {
 
-        if (isset($_GET) && !isset($_GET["action"])) {
+        if ($method == "GET") {
             $this->index();
-            return;
         }
 
-        if (isset($_GET) && ($_GET["action"] == "store")) {
-            $this->store($_POST);
-            return;
+        if ($method == "POST") {
+            $this->store($content);
         }
 
-        if (isset($_GET) && ($_GET["action"] == "update")) {
-            $this->update($_POST, $_GET["id"]);
-            return;
+        if ($method == "PUT" {
+            $this->update($id);
         }
 
-        if (isset($_GET) && ($_GET["action"] == "delete")) {
-            $this->delete($_GET["id"]);
-            return;
+        if ($method == "DELETE") {
+            $this->delete($id);
         }
     }
 
@@ -53,17 +49,8 @@ class ApiCardController
         }
 
         echo json_encode($cardApi);
-        // var_dump($cardApi);
-    
-        // new View("CardsList", [
-        //     "cards" => $cards,
-        // ]);
-    }
 
-    // public function create(): void
-    // {
-    //     new View("CreateCard");
-    // }
+    }
 
     public function store(array $request): void
     {

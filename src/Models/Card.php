@@ -53,7 +53,6 @@ class Card
         $this->title = $title;
     }
 
-
     public function save(): void
     {
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`,`title`) VALUES ('$this->name', '$this->title');");

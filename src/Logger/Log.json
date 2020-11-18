@@ -760,3 +760,39 @@
     "message": "Updated Card",
     "id": null
 }
+{
+    "time": "18-11-2020 09:07:35",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "18-11-2020 09:07:56",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "18-11-2020 09:08:51",
+    "action": "Create",
+    "message": "Created a new Card",
+    "id": null
+}
+{
+    "time": "18-11-2020 09:08:59",
+    "action": "Edit",
+    "message": "Edit page",
+    "id": null
+}
+{
+    "time": "18-11-2020 09:09:33",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}
+{
+    "time": "18-11-2020 09:09:39",
+    "action": "Delete",
+    "message": "Card deleted",
+    "id": null
+}

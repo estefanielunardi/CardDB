@@ -19,16 +19,15 @@ class ApiCardController
         }
 
         if ($method == "POST") {
-            $this->store($content);
-            
+            $this->store($content);  
         }
-
-        // if ($method == "PUT" {
-        //     $this->update($id);
-        // }
 
         if ($method == "DELETE") {
             $this->delete($id);
+        }
+
+        if ($method == "PUT") {
+            $this->update($id);
         }
     }
 
@@ -56,23 +55,36 @@ class ApiCardController
 
     public function store(array $request): void
     {
-
         $newCard = new Card($request["name"], $request["title"]);
         $newCard->save();
         
-        // $cards = $newCard->all(); 
+        $cards = $newCard->all();
+        $cardApi = [];
+        foreach ($cards as $card) 
+        {
+           $cardsArray = 
+           [ 
+               "name" => $card->getName(),
+               "title" =>$card->getTitle(),
+               "id" => $card->getId(),
+               "date" => $card->getDate(),
+            ];
+            array_push($cardApi, $cardsArray);
+        }
+
+        echo json_encode($cardApi);
 
         // $cardHelper = new Card();
-        // $cardHelper = $newCard->findById($id);
+        // $cardHelper = $newCard->selectLastId();
 
-        array_push($newCard, [
-            "name" => $card->getName(),
-            "title" =>$card->getTitle(),
-            "id" => $card->getId(),
-            "date" => $card->getDate(), 
-        ]); 
+        // array_push($cardHelper, [
+        //     "name" => $card->getName(),
+        //     "title" =>$card->getTitle(),
+        //     "id" => $card->getId(),
+        //     "date" => $card->getDate(), 
+        // ]); 
 
-        echo json_encode($newCard); 
+        // echo json_encode($cardHelper); 
     }
 
     public function delete($id)
@@ -80,19 +92,13 @@ class ApiCardController
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
         $card->delete();
-
-        // $newCard = new Card();
-        // $cards = $newCard->all();
     }
 
     public function update(array $request, $id)
     {
-        
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
         $card->renameNameAndTitle($request["name"], $request["title"]);
-        $card->update();
-        
-        // $cards = $card->all();
+        $card->update();  
     }
 }

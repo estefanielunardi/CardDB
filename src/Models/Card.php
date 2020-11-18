@@ -57,13 +57,7 @@ class Card
     {
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`,`title`) VALUES ('$this->name', '$this->title');");
     }
-
-    // public function saveOneCard(): void
-    // {
-    //     $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`,`title`) VALUES ('$this->name', '$this->title');");
-    //     $id=mysql_insert_id();
-    // }
-
+    
     public function all()
     {
         $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE `archive`= 0");
@@ -75,12 +69,26 @@ class Card
         }
         return $cardList;
     }  
-
+    
     public function delete()
     {
         $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$this->id}");
     }
 
+    public function selectLastId()
+    {
+        // $query = mysql_query("SELECT MAX `id` AS id FROM `enquiry_cards_table`");
+        // if ($row = mysql_fetch_row($rs)) 
+        // {
+        //     $id = trim($row[0]);
+        // }
+        // $id = mysql_insert_id();
+        
+        $result = mysql_query("SELECT MAX(id) AS max_id FROM enquiry_cards_table");
+        $row = mysql_fetch_array($result);
+        return $row["max_id"];
+    }
+    
 
     public function findById($id)
     {

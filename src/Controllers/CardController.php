@@ -93,7 +93,7 @@ class CardController
 
         $newCard = new Card();
         $cards = $newCard->all();
-        $log = new Log("Delete","Card deleted");
+        $log = new Log("Delete","Card deleted", $id);
         $log-> logInFile();
 
         new View("CardsList", [
@@ -108,7 +108,7 @@ class CardController
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
 
-        $log = new Log("Edit","Edit page");
+        $log = new Log("Edit","Edit page", $id);
         $log-> logInFile();
     
         new View("EditCard", ["card" => $card]);
@@ -116,7 +116,6 @@ class CardController
 
     public function update(array $request, $id)
     {
-        
         $cardHelper = new Card();
         $card = $cardHelper->findById($id);
         $card->renameNameAndTitle($request["name"], $request["title"]);
@@ -124,7 +123,7 @@ class CardController
         
         $cards = $card->all();
 
-        $log = new Log("Update","Updated Card");
+        $log = new Log("Update","Updated Card", $id);
         $log-> logInFile();
 
         new View("CardsList", [

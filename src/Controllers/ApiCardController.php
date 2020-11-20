@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\View;
 use App\Models\Card;
 use phpDocumentor\Reflection\Location;
-// use App\Logger\Log;
+
 
 class ApiCardController
 {
@@ -74,17 +74,6 @@ class ApiCardController
 
         echo json_encode($cardApi);
 
-        // $cardHelper = new Card();
-        // $cardHelper = $newCard->selectLastId();
-
-        // array_push($cardHelper, [
-        //     "name" => $card->getName(),
-        //     "title" =>$card->getTitle(),
-        //     "id" => $card->getId(),
-        //     "date" => $card->getDate(), 
-        // ]); 
-
-        // echo json_encode($cardHelper); 
     }
 
     public function delete($id)

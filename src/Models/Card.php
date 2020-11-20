@@ -73,22 +73,7 @@ class Card
     public function delete()
     {
         $query = $this->database->mysql->query("DELETE FROM `enquiry_cards_table` WHERE `enquiry_cards_table`.`id` = {$this->id}");
-    }
-
-    public function selectLastId()
-    {
-        // $query = mysql_query("SELECT MAX `id` AS id FROM `enquiry_cards_table`");
-        // if ($row = mysql_fetch_row($rs)) 
-        // {
-        //     $id = trim($row[0]);
-        // }
-        // $id = mysql_insert_id();
-        
-        $result = mysql_query("SELECT MAX(id) AS max_id FROM enquiry_cards_table");
-        $row = mysql_fetch_array($result);
-        return $row["max_id"];
-    }
-    
+    }    
 
     public function findById($id)
     {
@@ -119,6 +104,14 @@ class Card
             array_push($cardList, $cardItem);
         }
         return $cardList;
+    }
+
+    public function lastCard()
+    {
+        $database = new Card();
+        $query = $database->mysql->query("SELECT * FROM `enquiry_cards_table` ORDER BY id DESC LIMIT 1");
+        $card = $query->fetchAll();
+        return new Card ($card[0]["name"], $card[0]["title"], $card[0]["date"], $card[0]["id"]);
     }
 
 

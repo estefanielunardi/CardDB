@@ -7,6 +7,7 @@
             <li  class="appointButton"><a class="appoint" href="?action=create">NEW</a></li>
             <li  class="appointButton"><a class="appoint" href="?action=archiveview">ARCHIVED LIST</a></li>
         </ul>
+        <h3 id="styleTitle">CARD LIST</h3>
         <div class="cardContainer">
                 <?php
                 foreach ($data["cards"] as $card) {
